@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+{{result | json}}
+
+  <form>
+    <ion-item color="tertiary"  lines="full">
+      <ion-label position="floating">Summoner Name</ion-label>
+      <ion-input name="username" [(ngModel)]="name" type="text" required></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-select name="region"  [(ngModel)]="region"  color="tertiary" interface="action-sheet" placeholder="Select Region">
+          <ion-select-option value="BR1">Brazil</ion-select-option>
+          <ion-select-option value="EUN1">Eu Nordic</ion-select-option>
+          <ion-select-option value="EUW1">Eu West</ion-select-option>
+          <ion-select-option value="JP1">Japan</ion-select-option>
+          <ion-select-option value="KR">Korea</ion-select-option>
+          <ion-select-option value="LA1">Lan 1 </ion-select-option>
+          <ion-select-option value="LA2">Lan 2</ion-select-option>
+          <ion-select-option value="NA1">North America</ion-select-option>
+          <ion-select-option value="OC1">Oceania</ion-select-option>
+          <ion-select-option value="TR1">Turkey</ion-select-option>
+          <ion-select-option value="RU">Russia</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="submit()"  color="secondary" expand="block">Try</ion-button>
+
+
+
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
